@@ -1,9 +1,9 @@
 
-let stazas=44; //menesiais( galimas +5% to +10% pradinio atlyginimo didėjimas)
-let lojalumas=55; //menesiais ilojalumas( galimas lojalumo bonusas nuo 20 iki 100 )
-let produktyvumoKof=14; // koficijentas nuo -10.0 iki 10.0 ( uz neigiama produktyvuma galutinis atlygis mazinamas 2% už viena negatyvų koficijenta, arba didinamas 1,5% už kiekvieną pridetini koficientą )
+/* let stazas=15; //menesiais( galimas +5% to +10% pradinio atlyginimo didėjimas)
+let lojalumas=22; //menesiais lojalumas( galimas lojalumo bonusas nuo 20 iki 100 )
+let produktyvumoKof=2; // koficijentas nuo -10.0 iki 10.0 ( uz neigiama produktyvuma galutinis atlygis mazinamas 2% už viena negatyvų koficijenta, arba didinamas 1,5% už kiekvieną pridetini koficientą )
 let laipsnis=3; // id=0 darbuotojas = 1x; id= 1 specialistas =1.25x; id=2 vyr specialistas=1.35x; id=3 vadovo pavaduotojas=1.75x 
-let atlyginimas= 500; // pradinis nuo 500
+let atlyginimas= 750; // pradinis nuo 500 */
 
 document.getElementById("submit").onclick=function()
 {
@@ -12,14 +12,6 @@ document.getElementById("submit").onclick=function()
     let produktyvumoKof= document.getElementById("efficiency").value;
     let laipsnis= document.getElementById("degree").value; // paemus is html imputa nerodo reiksmes
     let atlyginimas= document.getElementById("wage").value;
-
-/* let stazas; //menesiais( galimas +5% to +10% pradinio atlyginimo didėjimas)
-let lojalumas; //menesiais ilojalumas( galimas lojalumo bonusas nuo 20 iki 100 )
-let produktyvumoKof; // koficijentas nuo -10.0 iki 10.0 ( uz neigiama produktyvuma galutinis atlygis mazinamas 2% už viena negatyvų koficijenta, arba didinamas 1,5% už kiekvieną pridetini koficientą )
-let laipsnis; // id=0 darbuotojas = 1x; id= 1 specialistas =1.25x; id=2 vyr specialistas=1.35x; id=3 vadovo pavaduotojas=1.75x 
-let atlyginimas; // pradinis nuo 500 */
-
-
 
 // priedas nuo darbines patirties
 
@@ -69,16 +61,11 @@ let lojalumoBonusas= 0 ;
             lojalumoBonusas=0;
         }
 
-
 // Atlyginimo kitimas nuo užiamamų pareigų
 
 switch (laipsnis) {
-    default:
-        try {
-             if  (laipsnis < 0 || laipsnis > 3) throw "Nurodytas netinkamas darbuotojo uzemamu paraigu laipsnis";}
-             catch (error){
-            console.log(error)
-        }
+   
+    
     case 0:
         laipsnis = 1
         break;
@@ -91,11 +78,8 @@ switch (laipsnis) {
             case 3:
             laipsnis = 1.75
             break;
-
 }
-
 let laipsnioPriedas=(((atlyginimas+lojalumoBonusas)*laipsnis)-(atlyginimas+lojalumoBonusas))
-
 
 //produktyvumas
 
@@ -130,4 +114,5 @@ console.log(((atlyginimas+lojalumoBonusas)*laipsnis)*produktyvumas)
 console.log((atlyginimas+lojalumoBonusas)*laipsnis)
 
 console.log("Visas gautas atlyginimas: " +(((atlyginimas+lojalumoBonusas)*laipsnis)+(((atlyginimas+lojalumoBonusas)*laipsnis)*produktyvumas)), "Iskaitant: " + "(lojalumo prieda) +" + lojalumoBonusas + ";", "(jūsų užimamos pareigų priedelis) +" +laipsnioPriedas, "Priklausant nuo jūsu darbo našumo jums buvo: ", efektingumoIsraiska, (((atlyginimas+lojalumoBonusas)*laipsnis)*produktyvumas))
+
 }
