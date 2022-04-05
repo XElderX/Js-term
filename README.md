@@ -1,9 +1,9 @@
 ###
 Uzdavinukas JS term homework<br>
 date:2022.04.04<br>
-***Known bugs:<u> if taking input through html form. "degree" input is not working, propably swich cases takes value somhow different becouse answer allways 0; </u> <br>
-<u>However, if you check manually by settings value in .js extension file  app gives correct answer<br>
-Other </u> issue is that some answers gives float value like xxxx.2500000003 instead of xxxx.25 <br>
+***Known bugs:<del> if taking input through html form. "degree" input is not working, propably swich cases takes value somhow different becouse answer allways 0; <br>
+However, if you check manually by settings value in .js extension file  app gives correct answer<br>
+Other </del> issue is that some answers gives float value like xxxx.2500000003 instead of xxxx.25 <br>
 Code is very noobish look like ^.^ <br>
 ##
 Assigment: <br>
